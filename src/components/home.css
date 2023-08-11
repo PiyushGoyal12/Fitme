@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+.cover {
+    border: 3px solid black;
+    border-radius: 10px;
+}
+.cover .imagescroll {
+    width: 100vw;
+    height: 90vh;
+    margin: 0;
+    background-color: black;
+}
+
+.cover .imagescroll {
+    width: 100%;
+    height: 90%;
+    scroll-snap-type: x proximity;
+    overflow-x: scroll;
+    display: flex;
+    padding-top: 10px;
+}
+.cover .imagescroll::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+.cover .imagescroll section {
+    flex: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
+    scroll-snap-align: start;
+}
+
+.child-img {
+    width: 100vw;
+    height: 90vh;
+    margin-left: 10px;
+    margin-right: 10px;
+}

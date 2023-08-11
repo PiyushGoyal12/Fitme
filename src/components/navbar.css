@@ -1,0 +1,56 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.nav {
+    display: flex;
+    background-color: black !important;
+    justify-content: space-between;
+    height: 70px;
+    align-items: center;
+}
+.logo {
+    justify-content: left;
+    color: #fff6e0;
+    font-size: 1.2rem;
+    padding: 50px;
+}
+.links {
+    background-color: grey !important;
+    display: flex;
+    color: #61677a;
+}
+.options {
+    display: flex;
+    list-style: none;
+    font-size: 1.2rem;
+    align-items: center;
+    color: aquamarine;
+    justify-content: flex-end !important;
+}
+
+.options li {
+    text-decoration: none;
+    color: #d8d9da;
+    padding: 10px 20px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    margin-right: 60px;
+}
+.options li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 100%; /* Initially hidden to the right */
+    bottom: 0;
+    height: 2px;
+    background-color: blue; /* Change this color as needed */
+    transition: right 0.5s ease-in-out; /* Adjust transition time */
+    transform-origin: left;
+}
+
+.options li:hover::after {
+    right: 0; /* Slide in on hover */
+    transform-origin: right;
+}
